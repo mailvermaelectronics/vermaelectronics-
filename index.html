@@ -116,19 +116,14 @@
 
   <!-- CONTACT -->
  <section id="contact" class="section section-contact">
-  <section id="contact" class="section section-contact">
-  <div class="container contact-grid">
-    <div class="contact-card">
-      <h2>Contact Us</h2>
-      <form id="contactForm" class="contact-form" action="mailer.php" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="tel" name="phone" placeholder="Your Phone" required>
-        <textarea name="message" placeholder="Describe the issue" required></textarea>
-        <button type="submit" class="btn btn-primary">Send</button>
-        <button type="reset" class="btn btn-ghost">Clear</button>
-      </form>
-      <p id="formMessage" class="muted"></p>
+  <form action="https://formspree.io/f/xwpwqqgn" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="tel" name="phone" placeholder="Your Phone" required>
+  <textarea name="message" placeholder="Describe the issue" required></textarea>
+  <button type="submit">Send</button>
+</form>
+
     </div>
   </div>
 </section>
