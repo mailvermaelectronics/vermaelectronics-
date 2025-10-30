@@ -116,29 +116,21 @@
 
   <!-- CONTACT -->
  <section id="contact" class="section section-contact">
-  <form action="https://formspree.io/f/xwpwqqgn" method="POST" class="contact-form" id="contactForm">
+<form id="contactForm" action="https://formspree.io/f/xwpwqqgn" method="POST">
   <h2>Contact Us</h2>
-  <p class="muted">We’d love to hear from you. Fill out the form below and we’ll get back to you shortly.</p>
+  <p class="muted">We’d love to hear from you. Fill out the form below.</p>
 
-  <div class="form-group">
-    <label for="name">Full Name</label>
-    <input type="text" id="name" name="name" placeholder="John Doe" required>
-  </div>
+  <label for="name">Full Name</label>
+  <input type="text" id="name" name="name" placeholder="John Doe" required>
 
-  <div class="form-group">
-    <label for="email">Email Address</label>
-    <input type="email" id="email" name="email" placeholder="you@example.com" required>
-  </div>
+  <label for="email">Email Address</label>
+  <input type="email" id="email" name="email" placeholder="you@example.com" required>
 
-  <div class="form-group">
-    <label for="phone">Phone Number</label>
-    <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" required>
-  </div>
+  <label for="phone">Phone Number</label>
+  <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" required>
 
-  <div class="form-group">
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="5" placeholder="Describe your issue or question..." required></textarea>
-  </div>
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="5" placeholder="Describe your issue..." required></textarea>
 
   <div class="form-actions">
     <button type="submit" class="btn btn-primary">Send Message</button>
@@ -148,9 +140,9 @@
   <p id="formMessage" class="form-message"></p>
 </form>
 
-<!-- Optional Styling -->
+<!-- Styles -->
 <style>
-  .contact-form {
+  form {
     max-width: 500px;
     margin: 2rem auto;
     padding: 1.5rem 2rem;
@@ -160,26 +152,20 @@
     font-family: "Segoe UI", Roboto, sans-serif;
   }
 
-  .contact-form h2 {
-    margin-bottom: 0.5rem;
+  h2 {
     text-align: center;
-    color: #222;
+    margin-bottom: 0.5rem;
   }
 
-  .contact-form .muted {
+  .muted {
     text-align: center;
-    font-size: 0.9rem;
     color: #666;
     margin-bottom: 1.5rem;
   }
 
-  .form-group {
-    margin-bottom: 1.2rem;
-  }
-
   label {
     display: block;
-    margin-bottom: 0.4rem;
+    margin: 0.5rem 0 0.2rem;
     font-weight: 500;
   }
 
@@ -188,8 +174,8 @@
     padding: 0.7rem;
     border: 1px solid #ccc;
     border-radius: 8px;
+    margin-bottom: 1rem;
     font-size: 1rem;
-    transition: border-color 0.2s;
   }
 
   input:focus, textarea:focus {
@@ -200,29 +186,26 @@
   .form-actions {
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 
   .btn {
     padding: 0.7rem 1.2rem;
     border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
     border: none;
+    cursor: pointer;
   }
 
   .btn-primary {
     background-color: #007bff;
-    color: white;
+    color: #fff;
   }
 
   .btn-primary:hover {
-    background-color: #0069d9;
+    background-color: #0056b3;
   }
 
   .btn-secondary {
-    background-color: #f1f1f1;
-    color: #333;
+    background-color: #f2f2f2;
   }
 
   .btn-secondary:hover {
@@ -230,17 +213,49 @@
   }
 
   .form-message {
-    margin-top: 1rem;
     text-align: center;
-    font-size: 0.95rem;
+    margin-top: 1rem;
   }
 </style>
 
-<!-- Script for Clear Button -->
+<!-- Working Script -->
 <script>
-  document.getElementById('clearForm').addEventListener('click', function() {
-    document.getElementById('contactForm').reset();
-    document.getElementById('formMessage').textContent = '';
+  const form = document.getElementById("contactForm");
+  const formMessage = document.getElementById("formMessage");
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    formMessage.textContent = "Sending...";
+    formMessage.style.color = "#555";
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        formMessage.textContent = "✅ Message sent successfully!";
+        formMessage.style.color = "green";
+        form.reset();
+      } else {
+        formMessage.textContent = "❌ There was a problem sending your message. Please try again.";
+        formMessage.style.color = "red";
+      }
+    } catch (error) {
+      formMessage.textContent = "⚠️ Network error. Please check your connection.";
+      formMessage.style.color = "red";
+    }
+  });
+
+  document.getElementById("clearForm").addEventListener("click", () => {
+    form.reset();
+    formMessage.textContent = "";
   });
 </script>
 
