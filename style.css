@@ -1,0 +1,111 @@
+/* real-products-style.css - product-focused visuals with realistic images */
+:root{
+  --bg:#0b0b0d;
+  --text:#eceff4;
+  --muted:#98a2ad;
+  --accent-1:#ff5c5c;
+  --accent-2:#ff9a4d;
+  --card:#0f1113;
+  --radius:12px;
+  --max-w:1200px;
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#0b0b0d 0%, #12060a 70%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{width:92%;max-width:var(--max-w);margin:0 auto}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:60;background:linear-gradient(90deg, rgba(17,10,12,0.6), rgba(16,6,8,0.45));backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,255,255,0.03)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.brand-logo{width:56px;height:56px;border-radius:10px;box-shadow:0 12px 30px rgba(255,92,92,0.08);animation:logoFade 900ms ease both}
+.brand-name{font-weight:700}
+.brand-tag{font-size:13px;color:var(--muted)}
+
+.main-nav ul{list-style:none;display:flex;gap:18px;align-items:center;margin:0;padding:0}
+.main-nav a{color:var(--text);text-decoration:none;font-weight:600}
+.main-nav a:hover{color:var(--accent-1)}
+
+/* Buttons */
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;cursor:pointer}
+.btn-primary{background:linear-gradient(90deg,var(--accent-1),var(--accent-2));color:white;border:0;box-shadow:0 10px 30px rgba(255,92,92,0.12)}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.05);color:var(--text)}
+
+/* Hero */
+.hero{position:relative;padding:72px 0 40px;min-height:420px;display:flex;align-items:center;overflow:hidden;background-size:cover;background-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(11,8,10,0.45), rgba(18,6,10,0.6));pointer-events:none}
+.hero{background-image:url('https://source.unsplash.com/featured/?technician,home,repair')}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center;position:relative;z-index:2}
+.eyebrow{display:inline-block;background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:999px;color:var(--muted);font-weight:700;font-size:13px}
+h1{font-size:34px;margin:8px 0}
+.lead{color:var(--muted);max-width:56ch}
+
+/* media card */
+.media-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:10px;box-shadow:0 12px 36px rgba(0,0,0,0.6);overflow:hidden}
+.media-img{height:220px;background-size:cover;background-position:center;border-radius:8px}
+
+/* Sections */
+.section{padding:54px 0}
+.alt{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+
+/* Titles */
+h2{font-size:24px;color:var(--accent-1);margin-bottom:6px}
+.muted{color:var(--muted)}
+
+/* Services grid */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
+.service-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:14px;border-radius:12px;box-shadow:0 12px 36px rgba(0,0,0,0.6);transition:transform 320ms ease, box-shadow 320ms ease;overflow:hidden}
+.service-card:hover{transform:translateY(-8px);box-shadow:0 28px 60px rgba(0,0,0,0.75)}
+.img-wrap{height:140px;border-radius:10px;overflow:hidden;margin-bottom:10px}
+.img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 400ms ease}
+.service-card:hover .img-wrap img{transform:scale(1.04)}
+
+/* About */
+.two-col{display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:center}
+.about-image{height:220px;background-size:cover;background-position:center;border-radius:12px}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start}
+.contact-card{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);box-shadow:0 12px 36px rgba(0,0,0,0.6)}
+.contact-form{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+.contact-form input,.contact-form textarea{padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text)}
+
+/* map placeholder */
+.map-card{background:linear-gradient(90deg, rgba(255,255,255,0.01), transparent);padding:18px;border-radius:12px;min-height:220px;display:flex;align-items:center;justify-content:center}
+.map-placeholder{width:100%;height:160px;border-radius:8px;background:linear-gradient(180deg,#0b0b0d,#141213);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(255,255,255,0.03);padding:16px 0;margin-top:30px;color:var(--muted)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+
+/* FAB */
+.fab{position:fixed;right:18px;bottom:18px;z-index:80;display:flex;flex-direction:column;align-items:flex-end}
+.fab-btn{background:linear-gradient(90deg,var(--accent-1),var(--accent-2));color:white;padding:12px 14px;border-radius:999px;border:0;box-shadow:0 12px 30px rgba(255,92,92,0.18);cursor:pointer;font-weight:700}
+.fab-menu{margin-top:8px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:12px;padding:8px;min-width:200px;box-shadow:0 12px 30px rgba(0,0,0,0.6);display:none}
+.fab-item{display:block;padding:8px 10px;border-radius:8px;text-decoration:none;color:var(--text);font-weight:700;margin-bottom:6px;border:1px solid rgba(255,255,255,0.03)}
+.fab-item:hover{background:rgba(255,255,255,0.02);color:var(--accent-1)}
+
+/* animations */
+@keyframes logoFade {from{opacity:0;transform:translateY(-8px) scale(0.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+/* responsive */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr}
+  .two-col{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .main-nav{display:none}
+}
+@media (max-width:520px){
+  h1{font-size:26px}
+  .brand-logo{width:48px;height:48px}
+  .hero{padding:54px 0}
+}
