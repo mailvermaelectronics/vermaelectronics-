@@ -377,93 +377,123 @@
   <div class="footer-container">
     <div class="footer-column">
       <div class="about-us">
-
+   <h3>Address</h3>
   <ul class="no-bullets">
 
+   <!-- Font Awesome link -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
 
+<p>
+  <a
+    href="https://www.google.com/maps?q=Verma+Electronics,+Bhawani+Ganj,+Siddharth+Nagar,+Uttar+Pradesh+272195"
+    target="_blank"
+    style="color:#fff; text-decoration:none;"
+  >
+    <i class="fa-solid fa-location-dot" style="color:#ff4b4b; margin-right:8px;"></i>
+    Verma Electronics, Police Station Road,<br>
+    Bhawani Ganj, Dist- Siddharth Nagar,<br>
+    Uttar Pradesh Pin: 272195
+  </a>
+  <br>
+  Sun - Sat : 9:00 AM - 9:00 PM
+</p>
+ 
 
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Footer Section</title>
-
-<!-- Font Awesome -->
+    <!-- Add this inside your <head> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<!-- Then in your footer section -->
+<p>
+  <a href="tel:+918114221473" style="color:#fff; text-decoration:none;">
+    <i class="fa-solid fa-phone" style="color:#00ff90; margin-right:8px;"></i>
+    +91-8114221473
+  </a>
+</p>
+
+
+<!-- Add this in your <head> if not already added -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Add this where you show your email -->
+<p>
+  <a href="mailto:mail.vermaelectronics@gmail.com" style="color:#fff; text-decoration:none;">
+    <i class="fa-solid fa-envelope" style="color:#ff4b4b; margin-right:8px;"></i>
+    mail.vermaelectronics@gmail.com
+  </a>
+</p>
+
+  
+
+
+
+    
+    <div class="footer-column">
+      <h3>Get Help</h3>
+      <a href="#">Help Center</a>
+      
+    </div>
+
+    <div class="footer-column">
+      <h3>Company</h3>
+      <a href="#">Contact Us</a>
+      <a href="#">About</a>
+      <a href="#">Stores</a>
+    </div>
+
+
+  <div class="container">
+    <!-- Quick Links Section -->
+<div class="quick-links">
+  <h3>Links</h3>
+  <div class="social-icons">
+    <a href="https://facebook.com/pardeep.kumarverma.5011" target="_blank" aria-label="Facebook">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+    </a>
+    <a href="https://instagram.com/pradeep.kumar.verma01" target="_blank" aria-label="Instagram">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+    </a>
+    <a href="https://youtube.com/@vermaelectronicsandrepairing" target="_blank" aria-label="YouTube">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube">
+    </a>
+  </div>
+</div>
+
+<!-- CSS -->
 <style>
-  body {
-    background: #111;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-
-  footer {
-    background: #0d0d0d;
-    padding: 40px 20px;
-    text-align: left;
-  }
-
-  .footer-column {
-    margin-bottom: 35px;
-  }
-
-  h3 {
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    position: relative;
-  }
-
-  h3::after {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 2px;
-    background: #e53935;
-    margin-top: 6px;
-  }
-
-  p, a {
-    color: #ccc;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #e53935;
-  }
-
-  i {
-    margin-right: 8px;
-  }
-
-  /* Social links section */
   .quick-links {
-    margin-top: 30px;
+           /* ✅ Centers everything inside */
+    margin-top: 25px;
   }
 
   .quick-links h3 {
-    margin-bottom: 12px;
+    color: #fff;
+    border-bottom: 2px solid #e53935;
+    display: inline-block;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .quick-links p {
+    color: #ccc;
+    margin: 8px 0 15px;
+    font-size: 1rem;
   }
 
   .social-icons {
     display: flex;
-    justify-content: flex-start;  /* 🔹 Keeps icons left-aligned like text */
-    gap: 15px;
-    margin-top: 10px;
+    justify-content: center;   /* ✅ Centers icons horizontally */
+    gap: 15px; 
+   margin-top: 10px;
   }
 
   .social-icons a {
     display: inline-flex;
-    align-items: center;
+    align-items: center; 
     justify-content: center;
     width: 45px;
     height: 45px;
@@ -472,87 +502,25 @@
     transition: all 0.3s ease;
   }
 
+  .social-icons a:hover {
+    transform: scale(1.1);
+  }
+
   .social-icons img {
     width: 22px;
     height: 22px;
     filter: invert(1);
   }
 
-  .social-icons a:hover {
-    transform: scale(1.1);
-  }
-
-  /* Hover brand colors */
+  /* Specific brand colors on hover */
   .social-icons a:nth-child(1):hover { background: #1877F2; } /* Facebook */
   .social-icons a:nth-child(2):hover { background: #E1306C; } /* Instagram */
   .social-icons a:nth-child(3):hover { background: #FF0000; } /* YouTube */
-
-  /* Responsive tweak */
-  @media(max-width: 768px) {
-    footer {
-      text-align: center;
-    }
-    .social-icons {
-      justify-content: center;
-    }
-  }
 </style>
-</head>
 
-<body>
 
-<footer>
 
-  <!-- Address Section -->
-  <div class="footer-column">
-    <h3>Address</h3>
-    <p>
-      <a href="https://www.google.com/maps?q=Verma+Electronics,+Bhawani+Ganj,+Siddharth+Nagar,+Uttar+Pradesh+272195"
-         target="_blank">
-        <i class="fa-solid fa-location-dot" style="color:#ff4b4b;"></i>
-        Verma Electronics, Police Station Road,<br>
-        Bhawani Ganj, Dist- Siddharth Nagar,<br>
-        Uttar Pradesh Pin: 272195
-      </a>
-    </p>
-    <p>Sun - Sat : 9:00 AM - 9:00 PM</p>
-    <p><a href="tel:+918114221473"><i class="fa-solid fa-phone" style="color:#00ff90;"></i> +91-8114221473</a></p>
-    <p><a href="mailto:mail.vermaelectronics@gmail.com"><i class="fa-solid fa-envelope" style="color:#ff4b4b;"></i> mail.vermaelectronics@gmail.com</a></p>
-  </div>
 
-  <!-- Get Help -->
-  <div class="footer-column">
-    <h3>Get Help</h3>
-    <a href="#">Help Center</a>
-  </div>
 
-  <!-- Company -->
-  <div class="footer-column">
-    <h3>Company</h3>
-    <a href="#">Contact Us</a><br>
-    <a href="#">About</a><br>
-    <a href="#">Stores</a>
-  </div>
-
-  <!-- Social Links -->
-  <div class="quick-links">
-    <h3>Links</h3>
-    <div class="social-icons">
-      <a href="https://facebook.com/pardeep.kumarverma.5011" target="_blank" aria-label="Facebook">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
-      </a>
-      <a href="https://instagram.com/pradeep.kumar.verma01" target="_blank" aria-label="Instagram">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
-      </a>
-      <a href="https://youtube.com/@vermaelectronicsandrepairing" target="_blank" aria-label="YouTube">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube">
-      </a>
-    </div>
-  </div>
-
-</footer>
-
-</body>
-</html>
 
     
