@@ -514,58 +514,46 @@ textarea {
 
 <div class="footer-column">
   <!-- CSS -->
-<style>
-/* basic theme */
-.site-footer { background:#0f0f10; color:#fff; padding:36px 20px; font-family: Arial, sans-serif; }
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 320px; /* address | middle | links */
-  gap: 36px;
-  align-items: start; /* important: top-align columns */
-  max-width: 1100px;
-  margin: 0 auto;
+.footer-section {
+  text-align: center;
+  background-color: #0f0f10;
+  color: #fff;
+  padding: 30px 0;
 }
 
-/* column */
-.footer-col { text-align: left; }
-
-/* titles */
-.footer-title {
-  color:#fff;
-  font-weight:700;
-  font-size:16px;
-  display:block;
-  margin-bottom:10px;
-  padding-bottom:6px;
-  border-bottom: 2px solid #e53935;
-  width: fit-content;
-}
-
-/* links and muted text */
-.footer-link { display:block; color:#cfcfcf; text-decoration:none; margin:8px 0; }
-.footer-link:hover { color:#fff; }
-.muted { color:#bfbfbf; font-size:14px; line-height:1.6; }
-
-/* social icons */
-.social-icons {
-  margin-top: 14px;
-  display: flex;
-  gap: 14px;
-  justify-content: flex-start; /* aligns icons under the Links title */
-  align-items: center;
+.footer-section h3 {
+  text-decoration: underline;
+  color: #fff;
+  margin-bottom: 15px;
 }
 
 .social-icons a {
-  width:44px;
-  height:44px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  background:#222;
-  border-radius:50%;
-  text-decoration:none;
-  transition: transform .18s ease, background .18s ease;
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 28px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
+
+/* Realistic colorful icons */
+.social-icons .facebook i {
+  color: #1877f2;
+}
+
+.social-icons .instagram i {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.social-icons .youtube i {
+  color: #ff0000;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
 .social-icons a i { font-size:18px; color:#fff; }
 
 /* brand hover colors */
