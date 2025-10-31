@@ -361,10 +361,11 @@
 
 
   <div class="container">
-    <div class="quick-links">
-    <h3>Quick Links</h3>
-    <p class="desc">Electronics Shop</p>
-      <div class="social-icons">
+    <!-- Quick Links Section -->
+<div class="quick-links">
+  <h3>Quick Links</h3>
+  <p>Electronics Shop</p>
+  <div class="social-icons">
     <a href="https://facebook.com" target="_blank" aria-label="Facebook">
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
     </a>
@@ -377,11 +378,11 @@
   </div>
 </div>
 
-<!-- CSS Styling -->
+<!-- CSS -->
 <style>
   .quick-links {
-    text-align: left;
-    margin-top: 20px;
+    text-align: center;         /* ✅ Centers everything inside */
+    margin-top: 25px;
   }
 
   .quick-links h3 {
@@ -389,13 +390,20 @@
     border-bottom: 2px solid #e53935;
     display: inline-block;
     padding-bottom: 4px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 1.2rem;
     font-weight: 600;
   }
 
+  .quick-links p {
+    color: #ccc;
+    margin: 8px 0 15px;
+    font-size: 1rem;
+  }
+
   .social-icons {
     display: flex;
+    justify-content: center;   /* ✅ Centers icons horizontally */
     gap: 15px;
     margin-top: 10px;
   }
@@ -404,8 +412,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     background: #222;
     border-radius: 50%;
     transition: all 0.3s ease;
@@ -413,20 +421,16 @@
 
   .social-icons a:hover {
     transform: scale(1.1);
-    background: #e53935;
   }
 
   .social-icons img {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     filter: invert(1);
   }
 
-  /* Specific hover colors for each platform */
+  /* Specific brand colors on hover */
   .social-icons a:nth-child(1):hover { background: #1877F2; } /* Facebook */
   .social-icons a:nth-child(2):hover { background: #E1306C; } /* Instagram */
   .social-icons a:nth-child(3):hover { background: #FF0000; } /* YouTube */
 </style>
-
-
-    
