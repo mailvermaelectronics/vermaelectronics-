@@ -153,13 +153,12 @@ h1{font-size:36px;margin:14px 0 8px}
 
 
 
-/* ===== Footer Section ===== */
+/* ===== Fixed Footer Text Visibility ===== */
 .footer {
-  background: linear-gradient(90deg, #0b8793, #1e90ff);
-  color: #fff;
+  background: linear-gradient(90deg, #0b0b0d, #1a1a1d); /* dark background */
+  color: #ffffff;
   padding: 50px 20px;
   position: relative;
-  text-align: left;
 }
 
 .footer-container {
@@ -171,7 +170,7 @@ h1{font-size:36px;margin:14px 0 8px}
 }
 
 .footer-column h3 {
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 10px;
   border-bottom: 2px solid #ff5c5c;
   display: inline-block;
@@ -186,23 +185,22 @@ h1{font-size:36px;margin:14px 0 8px}
 
 .footer-column li {
   margin-bottom: 6px;
-  color: #e6e6e6;
-  line-height: 1.5;
+  color: #cccccc;
+  line-height: 1.6;
 }
 
 .footer-column a {
   display: block;
-  color: #e6e6e6;
+  color: #cccccc;
   text-decoration: none;
   margin-bottom: 6px;
 }
 
 .footer-column a:hover {
-  color: #fff;
-  text-decoration: underline;
+  color: #ff5c5c;
 }
 
-/* WhatsApp floating button */
+/* WhatsApp button */
 .whatsapp-btn {
   position: fixed;
   right: 18px;
@@ -225,13 +223,13 @@ h1{font-size:36px;margin:14px 0 8px}
   background: #20b858;
 }
 
-/* Mobile fix */
+/* Mobile friendly */
 @media (max-width: 768px) {
   .footer-container {
     grid-template-columns: 1fr;
     text-align: center;
   }
-  .footer-column h3 {
-    border: none;
+  .footer-column {
+    margin-bottom: 20px;
   }
 }
