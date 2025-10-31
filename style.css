@@ -151,21 +151,6 @@ h1{font-size:36px;margin:14px 0 8px}
 
 
 
-/* Removes all bullets and spacing in About Us section */
-.about-us ul,
-.about-us li,
-footer ul,
-footer li {
-  list-style: none !important;
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-}
-
-
-
-
-
-
 
 /* =======================
    FIXED FOOTER STYLE
@@ -267,4 +252,32 @@ footer li {
   .social-links {
     justify-content: center;
   }
+}
+
+
+
+
+
+
+
+<style>
+.no-bullets,
+.no-bullets ul,
+.no-bullets li,
+.about-us ul,
+.about-us li {
+  list-style-type: none !important;
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  background: none !important;
+}
+
+.about-us li::marker {
+  content: "" !important;
+}
+
+.about-us ul {
+  padding-inline-start: 0 !important;
+  margin-inline-start: 0 !important;
 }
