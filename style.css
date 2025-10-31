@@ -151,17 +151,17 @@ h1{font-size:36px;margin:14px 0 8px}
 
 
 
-
-
-
-.about-us ul {
-  list-style: none;       /* Removes the dots */
-  padding-left: 0;        /* Removes left space */
-  margin: 0;
+/* Removes all bullets and spacing in About Us section */
+.about-us ul,
+.about-us li,
+footer ul,
+footer li {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
 }
-.about-us li {
-  margin-bottom: 6px;     /* Optional spacing */
-}
+
+
 
 
 
