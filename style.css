@@ -153,12 +153,17 @@ h1{font-size:36px;margin:14px 0 8px}
 
 
 
-/* ===== Fixed Footer Text Visibility ===== */
+/* =======================
+   FIXED FOOTER STYLE
+   ======================= */
+footer,
 .footer {
-  background: linear-gradient(90deg, #0b0b0d, #1a1a1d); /* dark background */
-  color: #ffffff;
+  background: #0b0b0d; /* solid dark background */
+  color: #ffffff !important;
   padding: 50px 20px;
   position: relative;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
 }
 
 .footer-container {
@@ -170,11 +175,12 @@ h1{font-size:36px;margin:14px 0 8px}
 }
 
 .footer-column h3 {
-  color: #ffffff;
+  color: #ffffff !important;
   margin-bottom: 10px;
   border-bottom: 2px solid #ff5c5c;
   display: inline-block;
   padding-bottom: 5px;
+  font-weight: 700;
 }
 
 .footer-column ul {
@@ -185,22 +191,23 @@ h1{font-size:36px;margin:14px 0 8px}
 
 .footer-column li {
   margin-bottom: 6px;
-  color: #cccccc;
+  color: #e6e6e6 !important;
   line-height: 1.6;
 }
 
 .footer-column a {
   display: block;
-  color: #cccccc;
+  color: #e6e6e6 !important;
   text-decoration: none;
   margin-bottom: 6px;
+  transition: 0.3s;
 }
 
 .footer-column a:hover {
-  color: #ff5c5c;
+  color: #ff5c5c !important;
 }
 
-/* WhatsApp button */
+/* WhatsApp floating button */
 .whatsapp-btn {
   position: fixed;
   right: 18px;
@@ -214,7 +221,7 @@ h1{font-size:36px;margin:14px 0 8px}
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   text-decoration: none;
   z-index: 999;
 }
@@ -223,7 +230,7 @@ h1{font-size:36px;margin:14px 0 8px}
   background: #20b858;
 }
 
-/* Mobile friendly */
+/* Mobile layout */
 @media (max-width: 768px) {
   .footer-container {
     grid-template-columns: 1fr;
@@ -231,5 +238,8 @@ h1{font-size:36px;margin:14px 0 8px}
   }
   .footer-column {
     margin-bottom: 20px;
+  }
+  .footer-column h3 {
+    border: none;
   }
 }
