@@ -366,39 +366,45 @@ textarea {
 </body>
 </html>
 
-
 <!-- WhatsApp Contact Button -->
-<a href="https://wa.me/918114221473" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
-  <img src="WhatsApps.svg" alt="WhatsApps" />
+<a href="https://wa.me/918114221473" 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   aria-label="Chat on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
 </a>
 
+<!-- CSS Styling -->
 <style>
-.whatsapp-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  background: #25d366;
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  .whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+  }
 
-.whatsapp-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
-}
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  }
 
-.whatsapp-btn img {
-  width: 34px;
-  height: 34px;
-}
+  .whatsapp-float img {
+    width: 35px;
+    height: 35px;
+  }
 </style>
+
+
 
 
 
