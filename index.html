@@ -505,59 +505,99 @@ textarea {
     </a>
   </div>
 </div>
+ 
+ </footer>
 
-  
-<!-- CSS -->
+<!-- Font Awesome -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
 <style>
-  
-.quick-links {
-  margin-top: 25px;
-  text-align: center; /* ✅ align to left like other footer items */
-}
-  
-  .quick-links h3 {
+  body {
+    background: #0f0f10;
     color: #fff;
+    font-family: "Poppins", Arial, sans-serif;
+  }
+
+  .footer-section {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 30px;
+  }
+
+  .footer-column {
+    flex: 1 1 250px;
+    max-width: 300px;
+  }
+
+  .footer-column h3 {
     border-bottom: 2px solid #e53935;
     display: inline-block;
-    padding-bottom: 4px;
+    padding-bottom: 5px;
     margin-bottom: 10px;
-    font-size: 1.2rem;
     font-weight: 600;
   }
 
-  .quick-links p {
+  .footer-column p, .footer-column a {
     color: #ccc;
-    margin: 8px 0 15px;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    text-decoration: none;
+    line-height: 1.6;
+    transition: color 0.3s;
+  }
+
+  .footer-column a:hover {
+    color: #e53935;
+  }
+
+  .footer-column i {
+    color: #e53935;
+    margin-right: 6px;
+  }
+
+  .social-section {
+    margin-top: 20px;
   }
 
   .social-icons {
     display: flex;
-    justify-content: center; /* ✅ Align icons under "Links" heading */
-    gap: 15px; 
-   margin-top: 10px;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
   }
 
   .social-icons a {
-    display: inline-flex;
-    align-items: center; 
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    background: #222;
+    background: #1e1e1e;
+    padding: 12px;
     border-radius: 50%;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
+    color: #fff;
+    font-size: 1.1rem;
   }
 
   .social-icons a:hover {
+    background: #e53935;
     transform: scale(1.1);
   }
 
-  .social-icons img {
-    width: 22px;
-    height: 22px;
-    filter: invert(1);
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
   }
+</style>
+ 
+
 
 
   /* Specific brand colors on hover */
