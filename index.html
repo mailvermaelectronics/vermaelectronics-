@@ -366,15 +366,16 @@ textarea {
 </body>
 </html>
 
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/918114221473" 
+<!-- WhatsApp Contact Button -->
+<a href="https://wa.me/+918114221473" 
    class="whatsapp-float" 
    target="_blank" 
    rel="noopener noreferrer"
    aria-label="Chat on WhatsApp">
-  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
 </a>
 
+<!-- CSS Styling -->
 <style>
   .whatsapp-float {
     position: fixed;
@@ -383,26 +384,30 @@ textarea {
     bottom: 20px;
     right: 20px;
     background-color: #25d366;
+    color: #fff;
     border-radius: 50%;
+    text-align: center;
+    font-size: 28px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1000;
   }
 
   .whatsapp-float:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
   }
 
   .whatsapp-float img {
     width: 35px;
     height: 35px;
-    filter: brightness(0) invert(1);
   }
 </style>
+
+
 
 
 
