@@ -514,88 +514,57 @@ textarea {
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 />
 
+<!-- CSS -->
 <style>
-  body {
-    background: #0f0f10;
+  
+.quick-links {
+  margin-top: 25px;
+  text-align: center; /* ✅ align to left like other footer items */
+}
+  
+  .quick-links h3 {
     color: #fff;
-    font-family: "Poppins", Arial, sans-serif;
-  }
-
-  .footer-section {
-    text-align: center;
-    padding: 40px 20px;
-  }
-
-  .footer-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-bottom: 30px;
-  }
-
-  .footer-column {
-    flex: 1 1 250px;
-    max-width: 300px;
-  }
-
-  .footer-column h3 {
     border-bottom: 2px solid #e53935;
     display: inline-block;
-    padding-bottom: 5px;
+    padding-bottom: 4px;
     margin-bottom: 10px;
+    font-size: 1.2rem;
     font-weight: 600;
   }
 
-  .footer-column p, .footer-column a {
+  .quick-links p {
     color: #ccc;
-    font-size: 0.95rem;
-    text-decoration: none;
-    line-height: 1.6;
-    transition: color 0.3s;
-  }
-
-  .footer-column a:hover {
-    color: #e53935;
-  }
-
-  .footer-column i {
-    color: #e53935;
-    margin-right: 6px;
-  }
-
-  .social-section {
-    margin-top: 20px;
+    margin: 8px 0 15px;
+    font-size: 1rem;
   }
 
   .social-icons {
     display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 15px;
+    justify-content: center; /* ✅ Align icons under "Links" heading */
+    gap: 15px; 
+   margin-top: 10px;
   }
 
   .social-icons a {
-    background: #1e1e1e;
-    padding: 12px;
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: #222;
     border-radius: 50%;
-    transition: 0.3s ease;
-    color: #fff;
-    font-size: 1.1rem;
+    transition: all 0.3s ease;
   }
 
   .social-icons a:hover {
-    background: #e53935;
     transform: scale(1.1);
   }
 
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-      align-items: center;
-    }
+  .social-icons img {
+    width: 22px;
+    height: 22px;
+    filter: invert(1);
   }
-</style>
  
 
 
