@@ -531,6 +531,147 @@ textarea {
 <!-- CSS -->
 <style>
 
+
+
+
+
+
+
+
+
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f0f10; /* site dark theme */
+    color: #fff;
+  }
+
+  /* --- HEADER --- */
+  .site-header {
+    background-color: #ffffff; /* white header */
+    padding: 10px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* --- BRAND --- */
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .brand-logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+  }
+
+  .brand-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000; /* black text */
+  }
+
+  .brand-tag {
+    font-size: 0.9rem;
+    color: #555; /* subtle grey subtitle */
+  }
+
+  /* --- MENU TOGGLE (☰) --- */
+  .nav-toggle {
+    background: none;
+    border: none;
+    color: #000; /* black icon visible on white background */
+    font-size: 28px;
+    cursor: pointer;
+    display: block;
+    z-index: 1001;
+  }
+
+  /* --- MENU LIST --- */
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #0f0f10; /* dark dropdown for contrast */
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    text-align: right;
+    z-index: 1000;
+  }
+
+  .nav-list.active {
+    display: flex;
+    animation: fadeSlide 0.3s ease;
+  }
+
+  @keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* --- MENU LINKS --- */
+  .nav-list a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 0.95rem;
+  }
+
+  .nav-list a:hover {
+    color: #e53935; /* red hover like footer underline */
+  }
+
+  /* --- DESKTOP MENU --- */
+  @media (min-width: 768px) {
+    .nav-toggle {
+      display: none;
+    }
+
+    .nav-list {
+      display: flex;
+      position: static;
+      flex-direction: row;
+      background: none;
+      box-shadow: none;
+      gap: 25px;
+      padding: 0;
+    }
+
+    .nav-list a {
+      color: #000;
+    }
+
+    .nav-list a:hover {
+      color: #e53935;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
   
 
 /* FINAL: force each address row to stack and center */
