@@ -521,12 +521,17 @@ textarea {
 
 
 
-
-
   
-  /* ✅ Fix Address alignment */
+
+/* ✅ Fix Address alignment perfectly */
 .address-column {
   text-align: center;
+}
+
+.address-column a,
+.address-column p {
+  display: inline-block;
+  text-align: left; /* keeps multiline address clean */
 }
 
 /* ✅ Fix Links alignment */
@@ -535,8 +540,12 @@ textarea {
 }
 
 .social-icons {
-  justify-content: center;  /* centers icons under “Links” */
+  justify-content: center;
 }
+
+
+  
+
 
 
 
