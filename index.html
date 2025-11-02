@@ -541,7 +541,7 @@ textarea {
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0f0f10;
+    background: #0f0f10; /* dark theme */
     color: #fff;
   }
 
@@ -582,11 +582,11 @@ textarea {
     color: #bbb;
   }
 
-  /* ✅ Menu toggle button */
+  /* ✅ Menu button - visible on dark background */
   .nav-toggle {
     background: none;
     border: 2px solid #fff;
-    color: #fff;              /* make icon white */
+    color: #fff;
     font-size: 26px;
     padding: 4px 10px;
     border-radius: 6px;
@@ -595,24 +595,27 @@ textarea {
     display: block;
   }
 
-  /* ✅ Menu list hidden initially */
+  /* ✅ Menu dropdown - contrast fixed */
   .nav-list {
     display: none;
     flex-direction: column;
     position: absolute;
     top: 60px;
     right: 20px;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.08); /* light overlay for dark site */
+    backdrop-filter: blur(6px);
+    padding: 15px 25px;
     border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1000;
   }
 
-  /* ✅ Menu visible when active */
+  /* Show menu when active */
   .nav-list.active {
     display: flex;
   }
 
+  /* ✅ Links visible on dark background */
   .nav-list a {
     color: #fff;
     text-decoration: none;
@@ -623,10 +626,10 @@ textarea {
   }
 
   .nav-list a:hover {
-    color: #ff4b4b;
+    color: #e53935; /* red hover */
   }
 
-  /* ✅ Desktop layout */
+  /* ✅ Desktop view */
   @media (min-width: 768px) {
     .nav-toggle {
       display: none;
@@ -638,12 +641,17 @@ textarea {
       flex-direction: row;
       background: none;
       gap: 25px;
+      border: none;
+      backdrop-filter: none;
     }
 
     .nav-list a {
       padding: 0;
     }
   }
+
+
+  
 
 
 
