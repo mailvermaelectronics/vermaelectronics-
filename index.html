@@ -518,6 +518,48 @@ textarea {
 
 
 
+
+
+
+/* Hide the nav list by default on mobile */
+.nav-list {
+  display: none;
+  flex-direction: column;
+  background-color: #111;  /* match your site’s dark header background */
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  z-index: 999; /* ensures menu appears above all elements */
+}
+
+/* Show the menu when active */
+.nav-list.active {
+  display: flex;
+}
+
+/* Simple styling for toggle button (☰) */
+.nav-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+  
+
 /* FINAL: force each address row to stack and center */
 .address-column {
   display: block;             /* make the column a normal block */
