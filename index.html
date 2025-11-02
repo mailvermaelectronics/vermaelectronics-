@@ -524,94 +524,71 @@ textarea {
   
 
 
-/* -------------------------
-   Footer — precise centering
-   Paste this at the END of your <style> block
-   ------------------------- */
-
-/* container centered */
+/* FINAL: force each address row to stack and center */
 .address-column {
-  text-align: center;
+  display: block;             /* make the column a normal block */
+  width: 100%;
+  text-align: center;         /* center headings and children generally */
 }
 
-/* center each row (address / hours / phone / email) while allowing multiline text */
-.address-column p {
-  display: flex;
-  justify-content: center;   /* centers icon + text as a group */
-  align-items: flex-start;    /* icon aligns to first text line */
-  gap: 14px;                  /* spacing between icon and content */
-  margin: 18px 0;
-  padding: 0;
+/* force each direct child row to take full width and center icon + text */
+.address-column > p,
+.address-column > div,
+.address-column > a {
+  width: 100%;
+  display: flex !important;        /* ensure layout is flex for icon+text */
+  flex-direction: row;
+  justify-content: center;         /* centers icon + content horizontally */
+  align-items: flex-start;         /* icon aligns with first text line */
+  gap: 14px;
+  margin: 16px 0;
+  box-sizing: border-box;
 }
 
-/* the anchor or text block that holds the multiline address should be left-aligned
-   so line-breaks look natural, but constrained width so it centers with the icon */
-.address-column p a,
-.address-column p span,
-.address-column p .address-text {
+/* ensure the text block inside the row is left-aligned for nice breaks */
+.address-column > p a,
+.address-column > p span,
+.address-column > p .address-text,
+.address-column > div .address-text {
   display: inline-block;
   text-align: left;
-  max-width: 90vw;      /* responsive on small screens */
-  width: auto;
-  box-sizing: border-box;
-  line-height: 1.4;
+  max-width: 80vw;        /* keeps lines readable on phones */
+  line-height: 1.45;
 }
 
-/* make sure the icon doesn't add extra inline spacing */
-.address-column p i.fa-location-dot,
-.address-column p i.fa-phone,
-.address-column p i.fa-envelope {
-  flex: 0 0 28px;       /* keeps icons fixed width */
+/* make sure icons keep a fixed space and don't introduce extra inline spacing */
+.address-column i[class*="fa-"] {
+  flex: 0 0 30px;
   font-size: 22px;
   line-height: 1;
-  margin-top: 6px;      /* vertically aligns icon with first text line */
+  margin-top: 4px;        /* nudges icon to align with first text line */
 }
 
-/* Phone/email: keep icon + link centered as a group */
-.address-column p a[href^="tel:"],
-.address-column p a[href^="mailto:"] {
-  text-decoration: none;
-  color: inherit;
-  /* keep link left-aligned inside the centered group */
+/* phone/email links: keep left-aligned inside centered group */
+.address-column a[href^="tel:"],
+.address-column a[href^="mailto:"] {
   display: inline-block;
   text-align: left;
+  color: inherit;
+  text-decoration: none;
 }
 
-/* Ensure footer columns stack their links vertically and centered */
+/* make sure footer columns still stack and center links */
 .footer-container .footer-column {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
 }
 
-/* make each footer link its own line */
-.footer-container .footer-column a {
-  display: block;
-  margin: 6px 0;
-  text-align: center;
+/* social icons centered */
+.social-icons { display:flex !important; justify-content:center !important; gap:16px; }
+
+/* smaller screens: allow a little more width */
+@media (max-width:420px){
+  .address-column > p a,
+  .address-column > p .address-text { max-width: 92vw; }
 }
 
-/* Links block: keep social icons centered (if already using flex) */
-.links,
-.quick-links {
-  text-align: center;
-}
-
-.social-icons {
-  display: flex !important;
-  justify-content: center !important;
-  gap: 16px;
-  margin-top: 12px;
-}
-
-/* Small tweak: prevent inline <br> causing odd centering on very narrow screens */
-@media (max-width:420px) {
-  .address-column p a,
-  .address-column p span {
-    max-width: 95vw;
-  }
-}
 
 
   
