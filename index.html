@@ -540,76 +540,17 @@ textarea {
 
 
 
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0f0f10; /* site dark theme */
-    color: #fff;
-  }
-
-  /* --- HEADER --- */
-  .site-header {
-    background-color: #ffffff; /* white header */
-    padding: 10px 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-
-  .header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  /* --- BRAND --- */
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-  }
-
-  .brand-logo {
-    width: 45px;
-    height: 45px;
-    border-radius: 10px;
-  }
-
-  .brand-name {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #000; /* black text */
-  }
-
-  .brand-tag {
-    font-size: 0.9rem;
-    color: #555; /* subtle grey subtitle */
-  }
-
-  /* --- MENU TOGGLE (☰) --- */
-  .nav-toggle {
-    background: none;
-    border: none;
-    color: #000; /* black icon visible on white background */
-    font-size: 28px;
-    cursor: pointer;
-    display: block;
-    z-index: 1001;
-  }
-
-  /* --- MENU LIST --- */
+  /* --- MENU LIST (white theme) --- */
   .nav-list {
     display: none;
     flex-direction: column;
     position: absolute;
     top: 70px;
     right: 20px;
-    background-color: #0f0f10; /* dark dropdown for contrast */
+    background-color: #ffffff; /* White dropdown */
     padding: 15px 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     text-align: right;
     z-index: 1000;
   }
@@ -626,7 +567,7 @@ textarea {
 
   /* --- MENU LINKS --- */
   .nav-list a {
-    color: #fff;
+    color: #000000; /* Black text */
     text-decoration: none;
     padding: 10px 0;
     font-weight: bold;
@@ -634,7 +575,7 @@ textarea {
   }
 
   .nav-list a:hover {
-    color: #e53935; /* red hover like footer underline */
+    color: #e53935; /* Red hover accent */
   }
 
   /* --- DESKTOP MENU --- */
@@ -662,6 +603,8 @@ textarea {
     }
   }
 
+
+  
 
 
 
