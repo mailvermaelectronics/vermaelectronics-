@@ -23,6 +23,30 @@
         </div>
       </a>
 
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.querySelector(".menu-toggle, .hamburger, .menu-icon");
+  const navMenu = document.querySelector(".nav-links, .menu, nav ul");
+
+  if (menuBtn && navMenu) {
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+      menuBtn.classList.toggle("open");
+    });
+  }
+});
+</script>
+
+
+
+
+
+      
       <nav class="main-nav">
         <button id="navToggle" class="nav-toggle">☰</button>
         <ul id="mainMenu" class="nav-list">
