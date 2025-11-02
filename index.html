@@ -605,48 +605,6 @@ textarea {
 
 
 
-
-
-
-
-
-
-  /* keep default layout for desktop if you have media queries that show menu there */
-
-/* Mobile/hidden menu baseline (safe if other CSS sets display) */
-.nav-list {
-  box-sizing: border-box;
-  position: absolute;
-  top: 60px;
-  right: 10px;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-
-  /* animation helpers */
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 360ms ease;
-}
-
-/* When we want it visible — JS will add/remove "open" class */
-.nav-list.open {
-  /* large enough to hold content; JS will set inline maxHeight precisely */
-  max-height: 1000px;
-}
-
-/* If another style rule forces display:none, the JS below will override inline style */
-
-
-
-
-
-
-
-
-  
-
-
 /* FINAL: force each address row to stack and center */
 .address-column {
   display: block;             /* make the column a normal block */
