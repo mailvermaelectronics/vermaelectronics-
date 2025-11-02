@@ -535,33 +535,117 @@ textarea {
 
 
 
+  
 
-/* Hide the nav list by default on mobile */
-.nav-list {
-  display: none;
-  flex-direction: column;
-  background-color: #111;  /* match your site’s dark header background */
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  padding: 15px;
-  border-radius: 8px;
-  z-index: 999; /* ensures menu appears above all elements */
-}
 
-/* Show the menu when active */
-.nav-list.active {
-  display: flex;
-}
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f10;
+    color: #fff;
+  }
 
-/* Simple styling for toggle button (☰) */
-.nav-toggle {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 28px;
-  cursor: pointer;
-}
+  .site-header {
+    background-color: #0f0f10;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .brand-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .brand-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .brand-tag {
+    font-size: 0.9rem;
+    color: #bbb;
+  }
+
+  /* ✅ Menu toggle button */
+  .nav-toggle {
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;              /* make icon white */
+    font-size: 26px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 1001;
+    display: block;
+  }
+
+  /* ✅ Menu list hidden initially */
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px 20px;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+
+  /* ✅ Menu visible when active */
+  .nav-list.active {
+    display: flex;
+  }
+
+  .nav-list a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    text-align: left;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .nav-list a:hover {
+    color: #ff4b4b;
+  }
+
+  /* ✅ Desktop layout */
+  @media (min-width: 768px) {
+    .nav-toggle {
+      display: none;
+    }
+
+    .nav-list {
+      display: flex;
+      position: static;
+      flex-direction: row;
+      background: none;
+      gap: 25px;
+    }
+
+    .nav-list a {
+      padding: 0;
+    }
+  }
+
+
 
 
 
